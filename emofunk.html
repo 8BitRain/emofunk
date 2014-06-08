@@ -2,23 +2,38 @@
 <html>
 
 <head>
+<link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
 <style type="text/css">
+
 	.img{
 		display: block;
     	margin-left: auto;
-   		margin-right: auto }
-	}
+   		margin-right: auto;
+   		-webkit-filter: opacity(30%);
+  		filter: opacity(30%);
+  		
+   	}
 
+	
+   	h1{
+   		color: white;
+   		font-family: 'Lato', sans-serif;
+   		font-size: 60px;
+   	}
 	body{
 	
-		background-image: url(http://www.theblackmosaic.com/wp-content/uploads/2013/04/black-background.jpg);
+		background-image: url(https://raw.githubusercontent.com/8BitRain/emofunk/master/black-background.jpg);
 		background-size: cover;
 
 		/*background: 
 		url(http://www.theblackmosaic.com/wp-content/uploads/2013/04/black-background.jpg) 100% no-repeat;*/
 
 		/*		url(https://raw.githubusercontent.com/8BitRain/emofunk/master/emofunk.jpg) 50% -50%/500px 500px no-repeat,*/
+		/*Make sure user can't scroll*/
+		/* -webkit-filter: blur(.9px);
+  		filter: blur(.9px);*/
+		overflow: hidden;
 		
 	}
 </style>
@@ -27,7 +42,8 @@
 </head>
 
 <body>
-	<!--<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emofunk.jpg"> -->
+	<h1 align="center" font>EMOFUNK</h1>
+	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emofunk.jpg"> 
 </body>
 
 </html>
