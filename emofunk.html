@@ -6,9 +6,66 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript">
-	function splitMind(){
-		var 
+
+	var imgTop = null;
+	var imgBottom = null;
+	var increment = 0;
+	var anim;
+	function init(){
+		imgBottom = document.getElementById("body");
+		imgBottom.style.top = 50 + 'px';
+		imgTop = document.getElementById("head");
+		imgTop.style.top = 50 + 'px';
+		anim = null;
 	}
+	function splitMindDown(){
+		//Essentially we want to move the image up a few pixels and move the image down a few pixels
+		//var pixels = 
+		//console.log(increment);
+		increment++;
+		if(increment == 20)
+		{
+			//console.log("reached");
+			increment = 0;
+			return;
+		}
+		/*if(increment == 5)
+		{
+			splitMindUp();
+		}*/
+		//document.getElementById("body").style = "initial";
+		//img.style.position = "relative";
+		imgBottom.style.top = parseInt(imgBottom.style.top) + 10 + 'px';
+		imgTop.style.top = parseInt(imgTop.style.top) - 10 + 'px';
+		anim = setTimeout(splitMindDown, 10);
+		//document.getElementById("body").style.top = 100 + 'px';
+
+	}
+	function splitMindUp(){
+		//Essentially we want to move the image up a few pixels and move the image down a few pixels
+		//var pixels = 
+		console.log(increment);
+		increment++;
+		if(increment == 5)
+		{
+			console.log("reached");
+			increment = 0;
+			return;
+		}
+		//document.getElementById("body").style = "initial";
+		//img.style.position = "relative";
+		imgTop.style.top = parseInt(imgTop.style.top) - 10 + 'px';
+		anim = setTimeout(splitMindUp, 20);
+		//document.getElementById("body").style.top = 100 + 'px';
+
+	}
+
+	//For future reference you will create a new div and have it unhidden once sean head comes up for video play!
+
+
+	window.onload = init;
+
+
 </script>
 <style type="text/css">
 
@@ -16,10 +73,19 @@
 		display: block;
     	margin-left: auto;
    		margin-right: auto;
+   		position: relative;
+   		top: 50px;
+   		opacity: 40%;
    		-webkit-filter: opacity(40%);
   		filter: opacity(40%);
-  		opacity: 40%;
   		
+  		-moz-opacity:40%;
+  		
+   	}
+   	.f_logo{
+   		display: block;
+   		opacity: 40%;
+   		float: right;
    	}
 
 	
@@ -51,12 +117,15 @@
 </head>
 
 <body>
+	<a href=""><img class="f_logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/64-facebook.png"></a>
 	<h1 align="center" font>EMOFUNK</h1>
 
-	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png"> 
- 	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/EmoFunkBody.png"> 
+	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head"> 
+ 	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/EmoFunkBody.png" id="body"> 
+ 	<button type="button" onClick="splitMindDown()"> TEST DOWN </button>
+	<button type="button" onClick="splitMindUp()"> TEST UP </button>
 
-	<a href=""><img float="right" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/64-facebook.png"></a>
+	
 </body>
 
 </html>
