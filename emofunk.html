@@ -80,12 +80,24 @@
   		filter: opacity(40%);
   		
   		-moz-opacity:40%;
+  		clear: both;
+
+  		z-index: 0;
   		
    	}
-   	.f_logo{
-   		display: block;
+   	.logo{
+   		-webkit-filter: opacity(60%);
+   		display: inline;
    		opacity: 40%;
    		float: right;
+   		padding-right: 60px;
+   		padding-left: 0px;
+   		
+   	}
+
+   	.playButton{
+   		z-index: 1;
+   		
    	}
 
 	
@@ -94,6 +106,7 @@
    		font-family: 'Lato', sans-serif;
    		/*font-family: 'Open Sans', sans-serif;*/
    		font-size: 60px;
+   		clear: both;
    	}
 	body{
 	
@@ -117,8 +130,14 @@
 </head>
 
 <body>
-	<a href=""><img class="f_logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/64-facebook.png"></a>
+	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/facebook_icon.png"></a>
+	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/twitter_icon.png"></a>
+	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/soundcloud_icon.png"></a> 
+
 	<h1 align="center" font>EMOFUNK</h1>
+
+	 
+
 
 	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head"> 
  	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/EmoFunkBody.png" id="body"> 
