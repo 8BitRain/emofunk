@@ -97,7 +97,13 @@
 
    	.playButton{
    		z-index: 1;
-   		
+   		-webkit-filter: opacity(60%);
+   		display: inline;
+   		left: 50%;
+
+   		position:absolute;
+
+
    	}
 
 	
@@ -121,8 +127,14 @@
 		/*Make sure user can't scroll*/
 		/* -webkit-filter: blur(.9px);
   		filter: blur(.9px);*/
-		overflow: hidden;
+		 overflow-x :hidden;
+ 		 overflow-y: hidden;
 		
+	}
+
+	html{
+		  overflow-x :hidden;
+ 		  overflow-y: hidden;
 	}
 </style>
 	
@@ -130,8 +142,8 @@
 </head>
 
 <body>
-	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/facebook_icon.png"></a>
 	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/twitter_icon.png"></a>
+	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/facebook_icon.png"></a>
 	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/soundcloud_icon.png"></a> 
 
 	<h1 align="center" font>EMOFUNK</h1>
@@ -139,7 +151,8 @@
 	 
 
 
-	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head"> 
+	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head">
+	<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"> 
  	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/EmoFunkBody.png" id="body"> 
  	<button type="button" onClick="splitMindDown()"> TEST DOWN </button>
 	<button type="button" onClick="splitMindUp()"> TEST UP </button>
