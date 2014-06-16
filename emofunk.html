@@ -26,16 +26,17 @@
 		{
 			element.parentNode.removeChild(element);
 		}
-		if(increment == 0)
+		/*if(increment == 20)
 		{
 			document.getElementById("video").style.display = "block";
-		}
+		}*/
 
 		//console.log(increment);
 		increment++;
 		if(increment == 20)
 		{
 			//console.log("reached");
+			document.getElementById("video").style.display = "block";
 			increment = 0;
 			return;
 		}
@@ -102,7 +103,7 @@
    		margin-right: auto;
    		position: relative;
    		visibility: hidden;
-   		z-index: -2;
+   		z-index: 2;
    	}
    	.logo{
    		display: inline;
