@@ -20,7 +20,13 @@
 	}
 	function splitMindDown(){
 		//Essentially we want to move the image up a few pixels and move the image down a few pixels
-		//var pixels = 
+		//Start off by destroying the image
+		var element = document.getElementById("play");
+		if(element != null)
+		{
+			element.parentNode.removeChild(element);
+		}
+
 		//console.log(increment);
 		increment++;
 		if(increment == 20)
@@ -75,20 +81,19 @@
    		margin-right: auto;
    		position: relative;
    		top: 50px;
-   		opacity: 40%;
-   		-webkit-filter: opacity(40%);
-  		filter: opacity(40%);
-  		
-  		-moz-opacity:40%;
+
+
+   		opacity: .4;	
+
+
   		clear: both;
 
   		z-index: 0;
   		
    	}
    	.logo{
-   		-webkit-filter: opacity(60%);
    		display: inline;
-   		opacity: 40%;
+   		opacity: .4;
    		float: right;
    		padding-right: 60px;
    		padding-left: 0px;
@@ -97,13 +102,17 @@
 
    	.playButton{
    		z-index: 1;
-   		-webkit-filter: opacity(30%);
+   		opacity: .4;
    		display: inline;
-   		left: 50%;
-
+   		left: 48.5%;
    		position:absolute;
+   		cursor: pointer;
 
 
+   	}
+
+   	.img_container{
+   		overflow: hidden;
    	}
 
 	
@@ -128,13 +137,10 @@
 		/* -webkit-filter: blur(.9px);
   		filter: blur(.9px);*/
 		 overflow-x :hidden;
- 		 overflow-y: hidden;
-		
 	}
 
 	html{
-		  overflow-x :hidden;
- 		  overflow-y: hidden;
+		 
 	}
 </style>
 	
@@ -151,12 +157,12 @@
 
 	 
 
-
-	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head">
-	<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"> 
- 	<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/EmoFunkBody.png" id="body"> 
- 	<button type="button" onClick="splitMindDown()"> TEST DOWN </button>
-	<button type="button" onClick="splitMindUp()"> TEST UP </button>
+	<div class="img_container">
+		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head">
+		<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png" onclick="splitMindDown()" id="play">
+		<!-- <button class="playButton" type="button" onclick="splitMindDown()" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"><img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"> </button> -->
+ 		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/EmoFunkBody.png" id="body"> 
+ 	</div>
 
 	
 </body>
