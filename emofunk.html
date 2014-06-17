@@ -41,11 +41,11 @@
 			var height = 0;
 			for( i=0; i < increment; i++)
 			{
-				height += 10 + 10;
+				height += 20;
 			}
 			document.getElementById("video").height = height + "px";
 			var currentHeadPos = parseInt(document.getElementById("head").style.top);
-			document.getElementById("video").style.top = currentHeadPos + 475 + 'px';
+			document.getElementById("video").style.top = 475 - currentHeadPos + 'px';
 			document.getElementById("video").style.display = "block";
 			increment = 0;
 			return;
