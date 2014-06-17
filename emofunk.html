@@ -36,6 +36,14 @@
 		if(increment == 20)
 		{
 			//console.log("reached");
+			
+			//Configure the height for the video so it is placed perfectly in between images.
+			var height = 0;
+			for(int i 0; i < increment; i++)
+			{
+				height += 10 + 10;
+			}
+			document.getElementById("video").height = height + "px";
 			document.getElementById("video").style.display = "block";
 			increment = 0;
 			return;
@@ -48,6 +56,7 @@
 		//img.style.position = "relative";
 		imgBottom.style.top = parseInt(imgBottom.style.top) + 10 + 'px';
 		imgTop.style.top = parseInt(imgTop.style.top) - 10 + 'px';
+
 		anim = setTimeout(splitMindDown, 10);
 		//document.getElementById("body").style.top = 100 + 'px';
 
