@@ -143,8 +143,12 @@
 		console.log(event.data);
    		if(YT.PlayerState.ENDED == event.data)
    		{
-   			setTimeout(function(){document.getElementById("video").style.display = "none";}, 1500);
-   			splitMindReverse();
+   			setTimeout(function(){
+   				document.getElementById("video").style.display = "none";
+   				document.getElementById("download").style.display = "block"''
+   				splitMindReverse();
+   			}, 1500);
+
    			
    		}
    		
@@ -208,6 +212,18 @@
 
    	}
 
+   	.playButton{
+   		z-index: 1;
+   		opacity: .4;
+   		display: inline;
+   		left: 48.5%;
+   		position:absolute;
+   		cursor: pointer;
+   		display: none;
+
+
+   	}
+
    	.img_container{
    		overflow: hidden;
    	}
@@ -257,6 +273,7 @@
 	<div class="img_container">
 		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head">
 		<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png" onclick="splitMindDown()" id="play">
+		<img class="downloadButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/dl_icon.png" onclick="splitMindDown()" id="download">
 
  		<iframe id="video"  class="video" width="950" height="490" src="https://www.youtube.com/embed/VCYND5nS0Os?rel=0&showinfo=0&iv_load_policy=3&controls=0&autoplay=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
 
