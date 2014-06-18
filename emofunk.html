@@ -78,21 +78,25 @@
 		//document.getElementById("body").style.top = 100 + 'px';
 
 	}
-	function splitMindUp(){
-		//Essentially we want to move the image up a few pixels and move the image down a few pixels
-		//var pixels = 
-		console.log(increment);
-		increment++;
-		if(increment == 5)
+	function splitMindReverse(){
+			//Essentially we want to move the image up a few pixels and move the image down a few pixels
+		//Start off by destroying the image
+		var element = document.getElementById("play");
+		if(element != null)
 		{
-			console.log("reached");
+			element.parentNode.removeChild(element);
+		}
+		increment++;
+		if(increment == 20)
+		{
 			increment = 0;
 			return;
 		}
-		//document.getElementById("body").style = "initial";
-		//img.style.position = "relative";
-		imgTop.style.top = parseInt(imgTop.style.top) - 10 + 'px';
-		anim = setTimeout(splitMindUp, 20);
+
+		document.getElementById("body").style.top = parseInt(document.getElementById("body").style.top) - 10 + 'px';
+		document.getElementById("head").style.top = parseInt(document.getElementById("head").style.top) + 10 + 'px';
+
+		anim = setTimeout(splitMindReverse, 10);
 		//document.getElementById("body").style.top = 100 + 'px';
 
 	}
