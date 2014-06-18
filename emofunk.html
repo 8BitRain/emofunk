@@ -82,6 +82,24 @@
 
 	}
 
+	function twitter(){
+		document.getElementById("twitter").style.opacity = 1;
+	}
+
+	function facebook(){
+		document.getElementById("facebook").style.opacity = 1;
+
+	}
+
+	function tumblr(){
+		document.getElementById("tumblr").style.opacity = 1;
+
+	}
+
+	function soundcloud(){
+		document.getElementById("soundcloud").style.opacity = 1;
+
+	}
 	//For future reference you will create a new div and have it unhidden once sean head comes up for video play!
 
 
@@ -180,10 +198,10 @@
 </head>
 
 <body>
-	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/twitter_icon.png"></a>
-	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/facebook_icon.png"></a>
-	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/tumblr_icon.png"></a> 
-	<a href=""><img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/soundcloud_icon.png"></a> 
+	<a href=""><id="twitter" img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/twitter_icon.png" onmouseover="twitter()"> </a>
+	<a href=""><id="facebook" img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/facebook_icon.png" onmouseover="facebook()"></a>
+	<a href=""><id="tumblr" img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/tumblr_icon.png" onmouseover="tumblr()"></a> 
+	<a href=""><id="soundcloud" img class="logo" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/soundcloud_icon.png" onmouseover="soundcloud()"></a> 
 
 	<h1 align="center" font>EMOFUNK</h1>
 
@@ -193,7 +211,7 @@
 		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head">
 		<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png" onclick="splitMindDown()" id="play">
 
- 		<iframe id="video" class="video" width="950" height="490" src="//www.youtube.com/embed/VCYND5nS0Os?rel=0&showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+ 		<iframe id="video" class="video" width="950" height="490" src="//www.youtube.com/embed/VCYND5nS0Os?rel=0&showinfo=0&iv_load_policy=3&controls=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
 		<!-- <button class="playButton" type="button" onclick="splitMindDown()" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"><img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"> </button> -->
  		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/EmoFunkBody.png" id="body">
 
