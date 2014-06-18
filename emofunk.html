@@ -106,14 +106,15 @@
 	}
 	//For future reference you will create a new div and have it unhidden once sean head comes up for video play!
 
-	function onPlayerReady(){
-		alert("ready");
-	}
-    function onYouTubePlayerReady(playerId) {
-    	alert("page");
-  		ytplayer = document.getElementById("video");
-  		ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
-	}
+	var player;
+	function onYouTubeIframeAPIReady() {
+  		player = new YT.Player('video', {
+    	events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    	}
+  });
+}
 
 	function onStateChange(newState) {
    		console.log("Player's new state: " + newState);
