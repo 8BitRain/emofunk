@@ -53,6 +53,15 @@
 			document.getElementById("video").style.top = 475 - currentHeadPos - 237.5 + 'px';
 			document.getElementById("video").style.display = "block";
 			document.getElementById("video").src = "https://www.youtube.com/embed/VCYND5nS0Os?rel=0&showinfo=0&iv_load_policy=3&controls=0&autoplay=1&enablejsapi=1";
+			
+			//For future reference you will create a new div and have it unhidden once sean head comes up for video play!
+			// 2. This code loads the IFrame Player API code asynchronously.
+      		var tag = document.createElement('script');
+
+      		tag.src = "https://www.youtube.com/iframe_api";
+      		var firstScriptTag = document.getElementsByTagName('script')[0];
+      		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 			increment = 0;
 			return;
 		}
@@ -108,13 +117,7 @@
 		document.getElementById("soundcloud").style.opacity = 1;
 
 	}
-	//For future reference you will create a new div and have it unhidden once sean head comes up for video play!
-	// 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 	var player;
 	function onYouTubeIframeAPIReady() {
@@ -132,6 +135,7 @@
 
 
 	function onPlayerStateChange(event) {
+		console.log("ready-3");
 		console.log(event.data);
    		if(YT.PlayerState.ENDED == event)
    		{
