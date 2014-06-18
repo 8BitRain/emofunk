@@ -106,15 +106,15 @@
 	}
 	//For future reference you will create a new div and have it unhidden once sean head comes up for video play!
 
-	function PlayerState() { 
-        var sStatus = document.getElementById("video").getPlayerState(); 
-        if (sStatus == -1) alert ("Video has not started."); 
-        else if (sStatus == 0) alert ("Video has ended."); 
-        else if (sStatus == 1) alert ("Video is playing."); 
-        else if (sStatus == 2) alert ("Video is paused."); 
-        else if (sStatus == 3) alert ("Video is buffering."); 
-        else if (sStatus == 5) alert ("Video is cued."); 
-    } 
+	
+    function onYouTubePlayerReady(ytplayer) {
+  		ytplayer = document.getElementById("video");
+  		ytplayer.addEventListener("onStateChange", "onytplayerStateChange");
+	}
+
+	function onytplayerStateChange(newState) {
+   		alert("Player's new state: " + newState);
+}
 
 	window.onload = init;
 
@@ -224,7 +224,7 @@
 		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head">
 		<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png" onclick="splitMindDown()" id="play">
 
- 		<iframe id="video" class="video" width="950" height="490" src="//www.youtube.com/embed/VCYND5nS0Os?rel=0&showinfo=0&iv_load_policy=3&controls=0&autoplay=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+ 		<iframe id="video" class="video" width="950" height="490" src="//www.youtube.com/embed/VCYND5nS0Os?rel=0&showinfo=0&iv_load_policy=3&controls=0&autoplay=0&enablejsapi=1&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
 		<!-- <button class="playButton" type="button" onclick="splitMindDown()" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"><img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"> </button> -->
  		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/EmoFunkBody.png" id="body">
 
