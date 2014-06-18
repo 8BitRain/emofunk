@@ -125,8 +125,12 @@
   });
 }
 
-	function onPlayerStateChange(newEvent) {
-   		console.log("Player's new state: " + newEvent);
+	function onPlayerStateChange(event) {
+   		if(YT.PlayerState.ENDED == event)
+   		{
+   			alert("omg");
+   			console.log("omg");
+   		}
 }
 
 	window.onload = init;
