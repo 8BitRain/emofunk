@@ -120,9 +120,14 @@
 		console.log("ready");
   		player = new YT.Player('video', {
     	events: {
-      'onStateChange': onPlayerStateChange
+    		'onReady': onPlayerReady,
     	}
   });
+}
+	function onPlayerReady() {
+    player.addEventListener('onStateChange', function(e) {
+        console.log('State is:', e.data);
+    });
 }
 
 	function onPlayerStateChange(event) {
