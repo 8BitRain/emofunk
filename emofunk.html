@@ -101,6 +101,29 @@
 
 	}
 
+	function revealDownload(){
+			//Essentially we want to move the image up a few pixels and move the image down a few pixels
+		//Start off by destroying the image
+		var element = document.getElementById("download");
+		if(element != null)
+		{
+			element.parentNode.removeChild(element);
+		}
+		increment++;
+		if(increment == 10)
+		{
+			increment = 0;
+			return;
+		}
+
+		document.getElementById("body").style.top = parseInt(document.getElementById("body").style.top) + 10 + 'px';
+		document.getElementById("head").style.top = parseInt(document.getElementById("head").style.top) - 10 + 'px';
+
+		anim = setTimeout(splitMindReverse, 10);
+		//document.getElementById("body").style.top = 100 + 'px';
+
+	}
+
 	function twitter(){
 		document.getElementById("twitter").style.opacity = "1";
 		console.log("Work");
