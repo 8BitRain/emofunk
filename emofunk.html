@@ -117,10 +117,10 @@
 			return;
 		}
 
-		document.getElementById("body").style.top = parseInt(document.getElementById("body").style.top) - 10 + 'px';
-		document.getElementById("head").style.top = parseInt(document.getElementById("head").style.top) + 10 + 'px';
+		document.getElementById("body").style.top = parseInt(document.getElementById("body").style.top) + 10 + 'px';
+		document.getElementById("head").style.top = parseInt(document.getElementById("head").style.top) - 10 + 'px';
 
-		anim = setTimeout(splitMindReverse, 10);
+		anim = setTimeout(revealDownload, 10);
 		//document.getElementById("body").style.top = 100 + 'px';
 
 	}
