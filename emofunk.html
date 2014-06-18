@@ -113,12 +113,12 @@
 		if(increment == 10)
 		{
 			increment = 0;
-			document.getElementById("downlaod").style.display = "block";
+			document.getElementById("downloadInfo").style.display = "block";
 			return;
 		}
 
-		document.getElementById("body").style.top = parseInt(document.getElementById("body").style.top) + 10 + 'px';
-		document.getElementById("head").style.top = parseInt(document.getElementById("head").style.top) - 10 + 'px';
+		document.getElementById("body").style.top = parseInt(document.getElementById("body").style.top) - 10 + 'px';
+		document.getElementById("head").style.top = parseInt(document.getElementById("head").style.top) + 10 + 'px';
 
 		anim = setTimeout(splitMindReverse, 10);
 		//document.getElementById("body").style.top = 100 + 'px';
@@ -302,7 +302,7 @@
 		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head">
 		<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png" onclick="splitMindDown()" id="play">
 		<img class="downloadButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/dl_icon.png" onclick="revealDownload()" id="download">
-		<h1 align="center" class="revealer"> Available For Download Saturday June 21 </h1>
+		<h1 align="center" class="revealer" id="downloadInfo"> Available For Download Saturday June 21 </h1>
 
  		<iframe id="video"  class="video" width="950" height="490" src="https://www.youtube.com/embed/VCYND5nS0Os?rel=0&showinfo=0&iv_load_policy=3&controls=1&autoplay=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
 
