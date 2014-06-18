@@ -18,6 +18,17 @@
 		imgTop = document.getElementById("head");
 		imgTop.style.top = 50 + 'px';
 		anim = null;
+
+			var player;
+	function onYouTubeIframeAPIReady() {
+		console.log("ready");
+  		player = new YT.Player('video', {
+    	events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    	}
+  });
+  		
 	}
 	function splitMindDown(){
 		//Essentially we want to move the image up a few pixels and move the image down a few pixels
@@ -106,15 +117,7 @@
 	}
 	//For future reference you will create a new div and have it unhidden once sean head comes up for video play!
 
-	var player;
-	function onYouTubeIframeAPIReady() {
-		console.log("ready");
-  		player = new YT.Player('video', {
-    	events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange
-    	}
-  });
+
 }
 
 	function onStateChange(newState) {
