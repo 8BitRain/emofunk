@@ -91,11 +91,12 @@
 	function splitMindReverse(){
 			//Essentially we want to move the image up a few pixels and move the image down a few pixels
 		//Start off by destroying the image
-		var element = document.getElementById("play");
-		if(element != null)
+		if(increment == 0)
 		{
-			element.parentNode.removeChild(element);
+			document.getElementById("play").style.display = "none";	
+			document.getElementById("download").style.display = "none";
 		}
+		
 		increment++;
 		if(increment == 20)
 		{
