@@ -31,6 +31,11 @@
 		{
 			element.parentNode.removeChild(element);
 		}
+		var elementDownload = document.getElementById("download");
+		if(element != null)
+		{
+			element.parentNode.removeChild(elementDownload);
+		}
 		/*if(increment == 20)
 		{
 			document.getElementById("video").style.display = "block";
@@ -109,6 +114,12 @@
 		{
 			element.parentNode.removeChild(element);
 		}
+		var elementPlay = document.getElementById("download");
+		if(element != null)
+		{
+			element.parentNode.removeChild(elementPlay);
+		}
+
 		increment++;
 		if(increment == 10)
 		{
@@ -230,7 +241,7 @@
    		z-index: 1;
    		opacity: .4;
    		display: inline;
-   		left: 48.5%;
+   		left: 52.5%;
    		position:absolute;
    		cursor: pointer;
 
@@ -245,7 +256,7 @@
    		z-index: 1;
    		opacity: .4;
    		display: inline;
-   		left: 48.5%;
+   		left: 46.5%;
    		position:absolute;
    		cursor: pointer;
    		display: inline;
