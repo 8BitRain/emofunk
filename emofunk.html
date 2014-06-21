@@ -117,16 +117,7 @@
 	function revealDownload(){
 			//Essentially we want to move the image up a few pixels and move the image down a few pixels
 		//Start off by destroying the image
-		/*var element = document.getElementById("download");
-		if(element != null)
-		{
-			element.parentNode.removeChild(element);
-		}
-		var elementPlay = document.getElementById("play");
-		if(elementPlay != null)
-		{
-			elementPlay.parentNode.removeChild(elementPlay);
-		}*/
+
 		if(increment == 0)
 		{
 			document.getElementById("play").style.display = "none";	
@@ -137,6 +128,17 @@
 		if(increment == 10)
 		{
 			increment = 0;
+			var downloadURL = function downloadURL(url) {
+    		var hiddenIFrameID = 'hiddenDownloader',
+       	    iframe = document.getElementById(hiddenIFrameID);
+    		if (iframe === null) {
+        		iframe = document.createElement('iframe');
+        		iframe.id = hiddenIFrameID;
+        		iframe.style.display = 'none';
+        		document.body.appendChild(iframe);
+    	}
+   		 iframe.src = url;
+		};
 			document.getElementById("downloadInfo").style.display = "block";
 			document.getElementById("audio").src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146170298&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"
 			return;
@@ -289,7 +291,7 @@
 
 	
    	h1{
-   		color: gray;
+   		color: white;
    		font-family: 'Lato', sans-serif;
    		/*font-family: 'Open Sans', sans-serif;*/
    		font-size: 60px;
