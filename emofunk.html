@@ -26,7 +26,12 @@
 	function splitMindDown(){
 		//Essentially we want to move the image up a few pixels and move the image down a few pixels
 		//Start off by destroying the image
-		var element = document.getElementById("play");
+		if(increment == 0)
+		{
+			document.getElementById("play").style.display = "none";	
+			document.getElementById("download").style.display = "none";
+		}
+		/*var element = document.getElementById("play");
 		if(element != null)
 		{
 			element.parentNode.removeChild(element);
@@ -35,7 +40,7 @@
 		if(elementDownload != null)
 		{
 			elementDownload.parentNode.removeChild(elementDownload);
-		}
+		}*/
 		/*if(increment == 20)
 		{
 			document.getElementById("video").style.display = "block";
@@ -109,7 +114,7 @@
 	function revealDownload(){
 			//Essentially we want to move the image up a few pixels and move the image down a few pixels
 		//Start off by destroying the image
-		var element = document.getElementById("download");
+		/*var element = document.getElementById("download");
 		if(element != null)
 		{
 			element.parentNode.removeChild(element);
@@ -118,6 +123,11 @@
 		if(elementPlay != null)
 		{
 			elementPlay.parentNode.removeChild(elementPlay);
+		}*/
+		if(increment == 0)
+		{
+			document.getElementById("play").style.display = "none";	
+			document.getElementById("download").style.display = "none";
 		}
 
 		increment++;
