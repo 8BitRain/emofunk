@@ -96,10 +96,12 @@
 			document.getElementById("play").style.display = "none";	
 			document.getElementById("download").style.display = "none";
 		}
-		
+
 		increment++;
 		if(increment == 20)
 		{
+			document.getElementById("play").style.display = "inline";	
+			document.getElementById("download").style.display = "inline";
 			increment = 0;
 			return;
 		}
@@ -271,6 +273,7 @@
    		position:absolute;
    		cursor: pointer;
    		display: inline;
+   		padding-right: 2px;
 
 
    	}
