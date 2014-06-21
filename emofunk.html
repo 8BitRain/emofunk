@@ -138,6 +138,7 @@
 		{
 			increment = 0;
 			document.getElementById("downloadInfo").style.display = "block";
+			document.getElementById("audio").src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146170298&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"
 			return;
 		}
 
@@ -282,6 +283,10 @@
    		overflow: hidden;
    	}
 
+   	.audio{
+   		display: none;
+   	}
+
 	
    	h1{
    		color: gray;
@@ -329,9 +334,11 @@
 		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/head2.png" id="head">
 		<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png" onclick="splitMindDown()" id="play">
 		<img class="downloadButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/dl_icon.png" onclick="revealDownload()" id="download">
-		<h1 align="center" class="revealer" id="downloadInfo"> Available For Download Saturday June 21st </h1>
+		<h1 align="center" class="revealer" id="downloadInfo"> Enjoy! </h1>
 
  		<iframe id="video"  class="video" width="621" height="392" src="https://www.youtube.com/embed/VCYND5nS0Os?rel=0&showinfo=0&iv_load_policy=3&controls=1&autoplay=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+
+ 		<iframe class="audio" id="audio" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/146170298&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
 
 		<!-- <button class="playButton" type="button" onclick="splitMindDown()" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"><img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png"> </button> -->
  		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/body2.png" id="body">
