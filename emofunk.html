@@ -307,6 +307,10 @@ if (iframe === null) {
 		left: calc(50% - 350px);
    	}
 
+   	.bandcamp_container{
+   		overflow: auto;
+   	}
+
 	
    	h1{
    		color: white;
@@ -356,7 +360,11 @@ if (iframe === null) {
 		<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png" onclick="splitMindDown()" id="play">
 		<img class="downloadButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/dl_icon.png" onclick="revealDownload()" id="download">
 
-		<iframe class="bandcamp" id="bandcamp" style="border: 0; width: 700px; height: 406px;" src="http://bandcamp.com/EmbeddedPlayer/album=2459495703/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/" seamless style="overflow:scroll"><a href="http://seanavery.bandcamp.com/album/emofunk">EMOFUNK by Sean Avery</a></iframe> -->
+		<div class="bandcamp_container">
+			<iframe class="bandcamp" id="bandcamp" style="border: 0; width: 700px; height: 406px;" src="http://bandcamp.com/EmbeddedPlayer/album=2459495703/size=large/bgcol=ffffff/linkcol=0687f5/artwork=none/transparent=true/" seamless><a href="http://seanavery.bandcamp.com/album/emofunk">EMOFUNK by Sean Avery</a></iframe> -->
+		</div>
+
+
 
 		<h1 align="center" class="revealer" id="downloadInfo"> Enjoy! </h1>
 		<!--<a href="http://seanavery.bandcamp.com/album/emofunk"> <h1 align="center" class="revealer" id="downloadInfo"> Download</a> -->
@@ -369,8 +377,6 @@ if (iframe === null) {
  		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/EmoFunkBody.png" id="body">
 
  	</div>
-
-	
 
 
 	
