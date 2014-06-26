@@ -130,7 +130,8 @@
 			increment = 0;
 			downloadURL("http://bandcamp.com/download?id=2459495703&ts=1403401339.2399019914&tsig=5d125db26dd6a489604b91442aef3275&type=album");
 			document.getElementById("downloadInfo").style.display = "block";
-			document.getElementById("audio").src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155415994&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"
+			document.getElementById("bandcamp").style.display = "block";
+			//document.getElementById("audio").src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/155415994&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"
 			return;
 		}
 
@@ -237,13 +238,13 @@ if (iframe === null) {
    		margin-right: auto;
    		position: absolute;
    		/* Firefox */
-		left: -moz-calc(50% - 310.5px);
+		left: -moz-calc(50% - 475px);
 		/* WebKit */
-		left: -webkit-calc(50% - 310.5px);
+		left: -webkit-calc(50% - 475px);
 		/* Opera */
-		left: -o-calc(50% - 310.5px);
+		left: -o-calc(50% - 475px);
 		/* Standard */
-		left: calc(50% - 310.5px);
+		left: calc(50% - 475px);
    	}
 
    	.logo{
@@ -288,6 +289,10 @@ if (iframe === null) {
    	}
 
    	.audio{
+   		display: none;
+   	}
+
+   	.bandcamp{
    		display: none;
    	}
 
@@ -338,7 +343,10 @@ if (iframe === null) {
 	<div class="img_container">
 		<img class="img" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/emoFunkHead.png" id="head">
 		<img class="playButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/play_button.png" onclick="splitMindDown()" id="play">
-		<a href="http://seanavery.bandcamp.com/album/emofunk"><img class="downloadButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/dl_icon.png" onclick="revealDownload()" id="download"></a>
+		<img class="downloadButton" src="https://raw.githubusercontent.com/8BitRain/emofunk/master/dl_icon.png" onclick="revealDownload()" id="download">
+
+		<iframe class="bandcamp" style="border: 0; width: 950px; height: 4000px;" src="http://bandcamp.com/EmbeddedPlayer/album=2459495703/size=large/bgcol=ffffff/linkcol=63b2cc/artwork=none/transparent=true/" seamless><a href="http://seanavery.bandcamp.com/album/emofunk">EMOFUNK by Sean Avery</a></iframe>
+
 		<h1 align="center" class="revealer" id="downloadInfo"> Enjoy! </h1>
 		<!--<a href="http://seanavery.bandcamp.com/album/emofunk"> <h1 align="center" class="revealer" id="downloadInfo"> Download</a> -->
 
